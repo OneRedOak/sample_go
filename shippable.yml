@@ -2,6 +2,3 @@ language: go
 
 go:
   - 1.2
-
-before_script:
-  -  go get -d -v ./... && go build -v ./...
