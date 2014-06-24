@@ -1,7 +1,6 @@
 package example_test
 
 import (
-	. "github.com/golang-samples/testing/blob/master/example"
 	"testing"
 )
 
