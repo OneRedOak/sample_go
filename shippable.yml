@@ -4,4 +4,7 @@ go:
   - 1.2
 
 script:
-  - go test -v ./...
+  - export GOPATH=$PWD
+  - export PATH=$PATH:$GOPATH/bin
+  - go install github.com/OneRedOak/sample_go
+  - go test github.com/OneRedOak/sample_go
