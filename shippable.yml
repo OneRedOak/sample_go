@@ -14,14 +14,13 @@ before_script:
 script:
   - export GOPATH=$PWD
   - export PATH=$PATH:$GOPATH/bin
-  - go get code.google.com/p/go.tools/cmd/cover
   - go get github.com/t-yuki/gocover-cobertura
   - go get github.com/onsi/gomega
+  - go get github.com/onsi/ginkgo
   - go install github.com/OneRedOak/sample
-  - cd $GOPATH/src/github.com/OneRedOak/sample
-  - go test -coverprofile=coverage.txt -covermode
+  - ginkgo -coverprofile=coverage.txt -covermode count github.com/OneRedOak/sample
   - gocover-cobertura < coverage.txt > coverage.xml
 
 after_script:
   - mv $PWD/src/github.com/OneRedOak/sample/junit.xml $PWD/shippable/testresults/
-  - mv $PWD/src/github.com/OneRedOak/sample/coverage.xml $PWD/shippable/codecoverage/
+  - mv $PWD/coverage.xml $PWD/shippable/codecoverage/
