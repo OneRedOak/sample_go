@@ -3,7 +3,15 @@ language: go
 go:
   - 1.2
 
+# Make folders for the reports
+before_script:
+  - mkdir -p shippable/testresults
+  - mkdir -p shippable/codecoverage
+
 script:
+  - echo $PWD
+  - ls
+  - ls shippable/testresults
   - export GOPATH=$PWD
   - export PATH=$PATH:$GOPATH/bin
   - go get github.com/onsi/ginkgo/ginkgo
