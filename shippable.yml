@@ -6,5 +6,7 @@ go:
 script:
   - export GOPATH=$PWD
   - export PATH=$PATH:$GOPATH/bin
-  - go install github.com/OneRedOak/sample_go
-  - go test github.com/OneRedOak/sample_go
+  - go get github.com/onsi/ginkgo/ginkgo
+  - go get github.com/onsi/gomega
+  - go install github.com/OneRedOak/sample
+  - go test github.com/OneRedOak/sample

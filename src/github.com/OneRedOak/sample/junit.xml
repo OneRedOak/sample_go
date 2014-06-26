@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <testsuite tests="1" failures="0" time="8.194300000000001e-05">
+      <testcase name="Sample Calculating square root of the number 4 should result 2" classname="Sample Suite" time="2.6743e-05"></testcase>
+  </testsuite>
