@@ -9,6 +9,6 @@ import (
 
 func TestSample(t *testing.T) {
 	RegisterFailHandler(Fail)
-	junitReporter := reporters.NewJUnitReporter("$GOPATH/shippabletestresults/junit.xml")
+	junitReporter := reporters.NewJUnitReporter("junit.xml")
 	RunSpecsWithDefaultAndCustomReporters(t, "Sample Suite", []Reporter{junitReporter})
 }
