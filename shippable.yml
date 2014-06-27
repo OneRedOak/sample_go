@@ -18,7 +18,7 @@ script:
   - go get github.com/onsi/gomega
   - go get github.com/onsi/ginkgo
   - go install github.com/OneRedOak/sample
-  - ginkgo -coverprofile=coverage.txt -covermode count github.com/OneRedOak/sample
+  - go test -coverprofile=coverage.txt -covermode count github.com/OneRedOak/sample
   - gocover-cobertura < coverage.txt > coverage.xml
 
 after_script:
